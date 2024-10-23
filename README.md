@@ -1,31 +1,26 @@
-# Phase 2 Project Description
 
-You've made it through the second phase of this course, and now you will put your new skills to use with a large end-of-Phase project!
+![Image of a clapper board with popcorn and camera](images/studio.jpg)
 
-In this project description, we will cover:
+# A Guide to Box Office Success
 
-* [***Project Overview:***](#project-overview) the project goal, audience, and dataset
-* [***Deliverables:***](#deliverables) the specific items you are required to produce for this project
-* [***Grading:***](#grading) how your project will be scored
-* [***Getting Started:***](#getting-started) guidance for how to begin your first project
+Authors: Elif SURUCU & Ricky BOCEK
 
 ## Project Overview
 
-For this project, you will use exploratory data analysis to generate insights for a business stakeholder.
+This analysis of movie data, sourced from Kaggle, The Numbers, and IMDb, investigates the financial success of movies by analyzing the risk-reward relationship between production budget and profitability, adjusted to the yearly Consumer Price Index. This analysis leverages historical movie data to identify patterns and key features, such as genres, directors, and number of principals, that correlate with higher profitability. By applying statistical techniques like ANOVA and linear regression, the project uncovers which genres and budget categories lead to the most successful movies. Additionally, the project offers recommendations for future movie production, focusing on maximizing ROI based on these identified success factors.
 
-### Business Problem
+### Business Understanding
 
-Your company now sees all the big companies creating original video content and they want to get in on the fun. They have decided to create a new movie studio, but they don’t know anything about creating movies. You are charged with exploring what types of films are currently doing the best at the box office. You must then translate those findings into actionable insights that the head of your company's new movie studio can use to help decide what type of films to create.
+The movie industry operates in a highly competitive environment where production companies aim to maximize profitability while minimizing financial risk. However, predicting the financial success of a movie is challenging due to various factors like genre, budget, cast, and market trends. This project seeks to address this uncertainty by identifying the key features that drive higher returns on investment (ROI) for movies. The goal is to provide movie studios and producers with actionable insights to optimize their budgets and make informed decisions about which genres, directors, and budget levels are more likely to result in profitable outcomes. By analyzing historical data, the project can help studios focus their resources on the most promising projects, thereby improving financial performance in an unpredictable market.
 
 ### The Data
 
-In the folder `zippedData` are movie datasets from:
+This project uses the following data sets:
 
-* [Box Office Mojo](https://www.boxofficemojo.com/)
 * [IMDB](https://www.imdb.com/)
-* [Rotten Tomatoes](https://www.rottentomatoes.com/)
-* [TheMovieDB](https://www.themoviedb.org/)
 * [The Numbers](https://www.the-numbers.com/)
+* [Kaggle - The Ultimate Film Statistics Dataset ](https://www.kaggle.com/datasets/alessandrolobello/the-ultimate-film-statistics-dataset-for-ml/data)
+* [US Bureau of Labor Statistics](https://www.bls.gov/)
 
 Because it was collected from various locations, the different files have different formats. Some are compressed CSV (comma-separated values) or TSV (tab-separated values) files that can be opened using spreadsheet software or `pd.read_csv`, while the data from IMDB is located in a SQLite database.
 
