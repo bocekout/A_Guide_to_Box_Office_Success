@@ -38,28 +38,28 @@ To ensure accurate analysis, we addressed missing values, removed duplicates, an
 
 We started by comparing adjusted gross revenue to adjusted budget then added linear regression to look for direct correlation. We expanded on the analysis by comparing ROI by budget category and then by two measures of acclaim. Then perfomed ANOVA tests looking for significant differences in ROI by genre or number of principals and characterized the differences we found with a post-hoc Tukey HSD test.
 
-![Graph of Inflation-Adjusted Gross Versus Budget](images\Gross_Budget_ColoredbyYear.png)
+![Graph of Inflation-Adjusted Gross Versus Budget](images/Gross_Budget_ColoredbyYear.png)
 
 This exploratory visualization of the data emphasizes the significant variance in gross earnings and, consequently, in return on investment (ROI). The color scale indicates that more recent films (yellow and light orange) tend to have higher production budgets than older films (purple), reflecting expansion and capitalization of the industry. Given the high variance in gross revenue and the fact that our top revenue outliers are not the same as our top budget outliers, a logical question followed: "IS there a relationship between budget and gross revenue?"
 
-![Graph of Inflation-Adjusted Gross Versus Budget with Linear Regression ](images\Linear_Reg_B_G.png)
+![Graph of Inflation-Adjusted Gross Versus Budget with Linear Regression ](images/Linear_Reg_B_G.png)
 
 From the regression, we observe that for each (adjusted) budget dollar spent, there is an average expected revenue of $3.19 (in 2022 dollar value), with budget driving as much as 30% of the variance (an R-squared of ~0.3).
 
-![Bar graph showing decreasing Mean ROI by Budget Category](images\ROI_Budget.png)
+![Bar graph showing decreasing Mean ROI by Budget Category](images/ROI_Budget.png)
 
 However, when analyzing budget categories, we notice that high-budget films have a diminished ROI compared to low-to-medium budget films, so the relationship is apparently not entirely linear. Increasing the budget within reasonable limits is an effective strategy for maximizing revenue, but due to diminishing average ROI and the previously-stated limitations in the data, managing risk exposure is still key - it's more worthwhile to be comfortably able to make *and release* several low-budget films than to over-extend for a higher budget film.
 
-![Graphs of Approval Rating and IMDb Average Rating vs ROI with Linear Regression](images\LinearReg_compare.png)
+![Graphs of Approval Rating and IMDb Average Rating vs ROI with Linear Regression](images/LinearReg_compare.png)
 
 Both the approval index and movie average rating have very weak positive correlations with ROI, with R-squared values of 2.6% for Approval and 4% for Ratings.
 The relationships are small but present, as indicated by the positive slopes of both regression lines. However, the high dispersion of the data (especially in the ROI outliers) suggests other factors may have a stronger influence on ROI. In general it is recommended to ignore ratings as an avenue to ROI.
 
-![Graph of Inflation-Adjusted Gross Versus Budget with ](images\barplot_genres.png)
+![Graph of Inflation-Adjusted Gross Versus Budget with ](images/barplot_genres.png)
 
 ANOVA test across genres allowed us to determine that there WAS a significant difference in mean ROI between genres. Following up with a post-hoc Tukey HSD test allowed us to describe which categories performed significantly better or worse than others. This bar plot clearly mean ROI differences between various movie genres, with error bars to assess the overall condience interval. This helps pinpoint which genres tend to perform better or worse in terms of ROI. For example, our data shows a good degree of confidence in the mean ROI for horror films, our second-highest performing category, but some high-performing genres, like musicals, are not as well-represented in the data, so they exhibit wider confidence intervals. Even so, musicals still rank among the genres with the strongest average ROIs and may still also be a good option. Family represents the third tier with smallest confidence interval of the top three and strong mean ROI as another emminently reasonable choice depending on other production factors.
 
-![Graph of Inflation-Adjusted Gross Versus Budget with ](images\barplot_principals.png)
+![Graph of Inflation-Adjusted Gross Versus Budget with ](images/barplot_principals.png)
 
 This visualization helps identify which specific groups of principal counts perform better or worse in terms of ROI. The confidence intervals allow us to assess which principal counts significantly differ from each other in terms of financial performance. Specifically we see that 2 principals has signficiantly higher mean ROI than 7-10 principals with 95% confidence, and has the highest mean ROI overall, so it seems likely that a "dynamic duo" can boost a film's appeal, while a large principal cast is more risky.
 
