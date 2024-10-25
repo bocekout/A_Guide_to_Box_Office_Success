@@ -5,6 +5,10 @@
 
 Authored by Elif Surucu & Ricky Bocek
 
+## Instructions Before Proceding
+
+All datasets used in this analysis are available in the Data.zip file - just unzip in place to use our project. The unzipped folder is already listed in the .gitignore to avoid errors with trying to upload the IMDb sqlite database file to GitHub, as it is too large when not compressed.
+
 ## Project Overview
 
 This analysis of movie data, sourced from Kaggle, The Numbers, and IMDb, investigates the financial success of movies by analyzing the risk-reward relationship between production budget and profitability, adjusted to the yearly Consumer Price Index. This analysis leverages historical movie data to identify patterns and key features, such as genres, directors, and number of principals, that correlate with higher profitability. By applying statistical techniques like ANOVA and linear regression, the project uncovers which genres and budget categories lead to the most successful movies. Additionally, the project offers recommendations for future movie production, focusing on maximizing ROI based on these identified success factors.
@@ -21,8 +25,6 @@ Project data sources:
 * [The Numbers](https://www.the-numbers.com/)
 * [Kaggle - The Ultimate Film Statistics Dataset](https://www.kaggle.com/datasets/alessandrolobello/the-ultimate-film-statistics-dataset-for-ml/data)
 * [US Bureau of Labor Statistics](https://www.bls.gov/)
-
-All datasets used in this analysis are available in the zipped Data file - just unzip in place to use our project. The unzipped folder is already added to the .gitignore to avoid errors with trying to upload the large IMDb sqlite database file to GitHub.
 
 This project combines movie budget and earnings sourced from Kaggle and The Numbers with an IMDb dataset of production elements to create a feature-rich list of over 5700 movies with financial metrics, using historical Consumer Price Index (CPI) tables from the US Bureau of Labor Statistics to adjust dollar values for inflation. Key data fields include genres, production budgets, domestic and worldwide gross earnings, and director. The project focuses on maximizing ROI to evaluate the financial success of movies, while accounting for risk as determined by production budget.
 
@@ -80,5 +82,3 @@ Several features in the IMDB dataset have yet to be thoroughly analyzed, offerin
 Additionally, incorporating more detailed production elements—such as crew experience, shooting locations, and marketing strategies—alongside economic and cultural context will provide a richer understanding of what drives a movie's success. For example, understanding how cultural trends or economic conditions at the time of release impact box office performance could yield valuable insights.
 
 Expanding the analysis in these ways will allow for more nuanced conclusions and help identify the key factors that contribute to a movie's financial and critical success.
-
-## Repo Structure
