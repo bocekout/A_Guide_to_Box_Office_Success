@@ -3,7 +3,7 @@
 
 # A Guide to Box Office Success
 
-Authors: Elif SURUCU & Ricky BOCEK
+Authored by Elif Surucu & Ricky Bocek
 
 ## Project Overview
 
@@ -19,7 +19,7 @@ Project data sources:
 
 * [IMDb](https://www.imdb.com/)
 * [The Numbers](https://www.the-numbers.com/)
-* [Kaggle - The Ultimate Film Statistics Dataset ](https://www.kaggle.com/datasets/alessandrolobello/the-ultimate-film-statistics-dataset-for-ml/data)
+* [Kaggle - The Ultimate Film Statistics Dataset](https://www.kaggle.com/datasets/alessandrolobello/the-ultimate-film-statistics-dataset-for-ml/data)
 * [US Bureau of Labor Statistics](https://www.bls.gov/)
 
 All datasets used in this analysis are available in the zipped Data file - just unzip in place to use our project. The unzipped folder is already added to the .gitignore to avoid errors with trying to upload the large IMDb sqlite database file to GitHub.
@@ -46,32 +46,32 @@ From the regression, we observe that for each (adjusted) budget dollar spent, th
 
 ![Bar graph showing decreasing Mean ROI by Budget Category](images\ROI_Budget.png)
 
-However, when analyzing budget categories, we notice that high-budget films have a diminished ROI compared to low-to-medium budget films, so the relationship is apparently not entirely linear. Increasing the budget within reasonable limits is an effective strategy for maximizing revenue, but due to diminishing average ROI and the previously-stated limitations in the data, managing risk exposure is still key - it's more worthwhile to be comfortably able to make *and release* 2 low- or mid-budget films than to over-extend for a higher budget film.
+However, when analyzing budget categories, we notice that high-budget films have a diminished ROI compared to low-to-medium budget films, so the relationship is apparently not entirely linear. Increasing the budget within reasonable limits is an effective strategy for maximizing revenue, but due to diminishing average ROI and the previously-stated limitations in the data, managing risk exposure is still key - it's more worthwhile to be comfortably able to make *and release* several low-budget films than to over-extend for a higher budget film.
 
 ![Graphs of Approval Rating and IMDb Average Rating vs ROI with Linear Regression](images\LinearReg_compare.png)
 
 Both the approval index and movie average rating have very weak positive correlations with ROI, with R-squared values of 2.6% for Approval and 4% for Ratings.
 The relationships are small but present, as indicated by the positive slopes of both regression lines. However, the high dispersion of the data (especially in the ROI outliers) suggests other factors may have a stronger influence on ROI. In general it is recommended to ignore ratings as an avenue to ROI.
 
-![Graph of Inflation-Adjusted Gross Versus Budget with ](images\Tukey_Genres.png)
+![Graph of Inflation-Adjusted Gross Versus Budget with ](images\barplot_genres.png)
 
-This visualization clearly shows the confidence intervals for ROI differences between various movie genres. It helps pinpoint which genres tend to perform better or worse in terms of ROI. For example, our data shows a high degree of confidence in the mean ROI for horror films. However, some high-performing genres, like musicals, are not as well-represented in the data, so they exhibit wider confidence intervals. Even so, musicals still rank among the genres with the strongest average ROIs and may still also be a good option. Drama represents a third tier with small confidence interval and strong mean ROI as another emminently reasonable choice depending on other production factors.
+ANOVA test across genres allowed us to determine that there WAS a significant difference in mean ROI between genres. Following up with a post-hoc Tukey HSD test allowed us to describe which categories performed significantly better or worse than others. This bar plot clearly mean ROI differences between various movie genres, with error bars to assess the overall condience interval. This helps pinpoint which genres tend to perform better or worse in terms of ROI. For example, our data shows a good degree of confidence in the mean ROI for horror films, our second-highest performing category, but some high-performing genres, like musicals, are not as well-represented in the data, so they exhibit wider confidence intervals. Even so, musicals still rank among the genres with the strongest average ROIs and may still also be a good option. Family represents the third tier with smallest confidence interval of the top three and strong mean ROI as another emminently reasonable choice depending on other production factors.
 
-![Graph of Inflation-Adjusted Gross Versus Budget with ](images\Tukey_Principals.png)
+![Graph of Inflation-Adjusted Gross Versus Budget with ](images\barplot_principals.png)
 
-This visualization helps identify which specific groups of principal counts perform better or worse in terms of ROI. The confidence intervals allow us to assess which principal counts significantly differ from each other in terms of financial performance. Specifically we see that 2 principals has signficiantly higher mean ROI than 7-10 principals with 95% confidence, and has the highest mean ROI overall, so it seems likely that a "dynamic duo" can boost a film's appeal, while a large principal cast is more risky. 
+This visualization helps identify which specific groups of principal counts perform better or worse in terms of ROI. The confidence intervals allow us to assess which principal counts significantly differ from each other in terms of financial performance. Specifically we see that 2 principals has signficiantly higher mean ROI than 7-10 principals with 95% confidence, and has the highest mean ROI overall, so it seems likely that a "dynamic duo" can boost a film's appeal, while a large principal cast is more risky.
 
 ## Conclusion
 
-- While larger budgets can lead to higher gross earnings, our analysis shows that ROI diminishes as budgets increase. High-budget films tend to offer lower returns compared to low- to medium-budget productions. It's essential to strike a balance—allocate enough resources to ensure quality, but avoid overspending, as the additional costs may not be justified by the returns.
+* While larger budgets can lead to higher gross earnings, our analysis shows that ROI diminishes as budgets increase. High-budget films tend to offer lower returns compared to low- to medium-budget productions. It's essential to strike a balance—allocate enough resources to ensure quality, but avoid overspending, as the additional costs may not be justified by the returns.
 
-- High ratings, including approval indexes and average ratings, have minimal impact on ROI. Focusing too much on achieving critical acclaim may not be financially beneficial. Instead, prioritize optimizing production costs and investing in genres with a proven track record of profitability to drive financial success.
+* High ratings, including approval indexes and average ratings, have minimal impact on ROI. Focusing too much on achieving critical acclaim may not be financially beneficial. Instead, prioritize optimizing production costs and investing in genres with a proven track record of profitability to drive financial success.
 
-- Genres such as Horror, Musicals, and Drama consistently deliver higher ROI. Concentrating on these top-performing genres allows filmmakers to maximize returns while minimizing financial risk. Sticking to genres with a strong track record is a more reliable strategy than experimenting with less proven options.
+* Genres such as Horror, Musicals, and Drama consistently deliver higher ROI. Concentrating on these top-performing genres allows filmmakers to maximize returns while minimizing financial risk. Sticking to genres with a strong track record is a more reliable strategy than experimenting with less proven options.
 
-- Films with smaller principal casts, particularly dynamic duos, tend to deliver better ROI than productions with large casts. Large ensembles generally don’t result in higher returns, whereas dynamic duos offer broad appeal and can be produced more efficiently.
+* Films with smaller principal casts, particularly dynamic duos, tend to deliver better ROI than productions with large casts. Large ensembles generally don’t result in higher returns, whereas dynamic duos offer broad appeal and can be produced more efficiently.
 
-- Working with directors who have a successful track record, especially within key genres like Horror, Drama, and Musicals, significantly increases the chances of a high ROI. Directors with experience in low- to medium-budget films bring industry expertise and genre-specific knowledge that align with the financial goals of the project.
+* Working with directors who have a successful track record, especially within key genres like Horror, Drama, and Musicals, significantly increases the chances of a high ROI. Directors with experience in low- to medium-budget films bring industry expertise and genre-specific knowledge that align with the financial goals of the project.
 
 ## Next Steps
 
